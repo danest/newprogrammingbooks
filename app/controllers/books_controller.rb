@@ -4,7 +4,7 @@ class BooksController < ApplicationController
 
   
   def index
-    @books = Book.find(:all)
+    @books = Book.find(:all, :order => "id DESC")
   end
   
   def create
