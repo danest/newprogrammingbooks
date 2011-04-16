@@ -32,13 +32,20 @@ GEM
     annotate (2.4.0)
     arel (2.0.9)
     builder (2.1.2)
+    configuration (1.2.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faraday (0.5.7)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
+    heroku (1.20.1)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     i18n (0.5.0)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -127,6 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  heroku
   nokogiri
   oa-oauth (= 0.1.6)
   omniauth
