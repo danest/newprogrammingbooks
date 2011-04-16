@@ -1,0 +1,32 @@
+<% @books.each do |book| %>
+	
+	<div class ="images">
+		<%= link_to image_tag(book[:thumbnail], :size => "130x160"), book[:url] %>
+	</div>
+	<div class="information">
+		<%= link_to book[:title], book[:url] %> 
+		<p>
+			<span class="bold">Price:</span> <%= book[:price] %> <br />
+			<span class="bold">Publisher:</span> <%= book[:publisher] %><br />
+			<span class="bold">Author:</span> <%= book[:author] %><br />
+			<span class="bold">Release Date:</span> <%= book[:date] %><br />
+			<span class="bold">ISBN:</span> <%= book[:isbn] %><br />
+		</p>
+		<div class="awesome">
+			<%= link_to "Purchase", book[:url], :class=> "awesome" %>
+		</div>
+		<div class="social">
+			   <a href="http://twitter.com/share" class="twitter-share-button"
+			      data-url=<%= book[:url] %>"
+			      data-via="danest"
+			      data-text="Check out this new book <%= book[:title] %>""
+			      data-count="horizontal">Tweet</a>
+		</div>
+		<div class="facebookshare">
+			<a class="awesome share" href="http://facebook.com/sharer.php?u=<%= book[:url] %>">Facebook</a>
+		</div>		
+	</div>
+	<div class="sep" style="clear:both;">
+		
+	</div>
+<% end %>

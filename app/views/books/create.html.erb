@@ -1,0 +1,8 @@
+require 'omniauth/oauth'
+<%=session['fb_error']%>
+
+<% if session['fb_auth'] %>
+  <a href='logout'><img src='images/fb_logout_button.png'>Logout</a>
+<% else %>
+  <a href="/auth/facebook/callback"><img src='images/fb_login_button.png'>LogIn</a>
+<% end %>
