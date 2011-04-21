@@ -13,6 +13,8 @@ Anynewbooks::Application.routes.draw do
   match '/auth/:provider/callback' => 'books#create'
   match '/auth/failure', :to => 'books#failure'
   match '/logout', :to => 'books#destroy'
+  match '/terms', :to => 'books#terms'
+  match '/privacy', :to => 'books#privacy'
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :books
 

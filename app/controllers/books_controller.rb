@@ -25,6 +25,14 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
   
+  def privacy
+    
+  end
+  
+  def terms
+    
+  end
+  
   def clear_session
     session['fb_auth'] = nil
     session['fb_token'] = nil
