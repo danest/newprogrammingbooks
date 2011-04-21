@@ -1,13 +1,11 @@
-require 'omniauth/oauth'
-
 class BooksController < ApplicationController
 
   
   def index
     @books = Book.find(:all, :order => "id DESC")
-    if session[:fb_auth]
-      redirect_to terms_path
-    end
+    # if session[:fb_auth]
+    #   redirect_to terms_path
+    # end
   end
   
   def create
