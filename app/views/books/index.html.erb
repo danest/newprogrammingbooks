@@ -1,6 +1,28 @@
+
 <div class="container">
-	<h1>This Weeks New Programming Books</h1>
+	<h1>This Weeks New Programming Books</h1><br />
 	<div class="center">
-		<%= render 'books/books' %>
+		
+	<% if session['fb_auth'] %>
+	  <a href='logout'>Logout</a>
+	  <%= render 'books/books' %>
+	<% else %>
+		<%= link_to image_tag("facebook.png"), "/auth/facebook",:class => "popup", :"data-width" => 600, :"data-height" => 400 %> <br />
+	<% end %>
+		<br />
+		<br />
+		<p class ="discover">
+			Discover new programming books. These books are for people interested in web development, computer science, algorithms or web design.
+		</p><br />
+		<p class ="discover">
+			We are currently updating the list weekly and plan on updating it daily in a little bit! Come discover new books with us.
+		</p><br />
+		<p class ="discover">
+			We will also be offering a daily subscription email, so that you get notified weekly on new books that are coming out.
+		</p>
+		<p>
+			<br />
+			<%= link_to "Log in with Facebook", "/auth/facebook",:class => "popup", :"data-width" => 600, :"data-height" => 400 %> <br />
+		</p>
 	</div>
 </div>

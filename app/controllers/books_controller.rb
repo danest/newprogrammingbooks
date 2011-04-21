@@ -16,7 +16,6 @@ class BooksController < ApplicationController
   
   def destroy
     clear_session
-    session['fb_error'] = 'Logged Out'
     redirect_to root_path
   end
   

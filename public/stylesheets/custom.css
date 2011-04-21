@@ -50,6 +50,11 @@ a.awesome{
 	cursor: pointer;
 	font-family:"Helvetica Neue", Arial;
 }
+.discover{
+	font-size:16px;
+	font-family:Georgia, Helvetica, Arial;
+	line-height: 24px;
+}
 div.sep{
 	border-top:10px solid #f7f7f7;
 }
@@ -73,3 +78,32 @@ div.social{
 .top_social{
 	float:right;
 }
+
+/*      Social Buttons 
+        Version 0.1
+        Made by Paul Schaefer
+        Date: 4/13/11 */
+/* Facebook */
+a.facebook {
+        background:#3B5998;
+        color:#FFF;
+        font:bold 18px Helvetica, Arial, sans-serif;
+        margin-right:30px;
+        padding:10px 28px;
+        text-decoration:none;
+        text-shadow:1px 1px 1px #627AAD;
+        box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD, -3px 3px 0 #627AAD;
+        -moz-box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD, -3px 3px 0 #627AAD;
+        -webkit-box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD, -3px 3px 0 #627AAD;
+        -o-box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD, -3px 3px 0 #627AAD;}
+
+a.facebook:hover {background:#627AAD;}
+
+a.facebook:active {
+        position:relative;
+        left:-1px;
+        top:1px;
+        box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD;
+        -moz-box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD;
+        -webkit-box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD;
+        -o-box-shadow:-1px 1px 0 #627AAD, -2px 2px 0 #627AAD;}

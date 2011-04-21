@@ -1,8 +1,9 @@
-require 'omniauth/oauth'
-<%=session['fb_error']%>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function () {
 
-<% if session['fb_auth'] %>
-  <a href='logout'><img src='images/fb_logout_button.png'>Logout</a>
-<% else %>
-  <a href="/auth/facebook/callback"><img src='images/fb_login_button.png'>LogIn</a>
-<% end %>
+	if(window.opener) {
+    window.opener.location.reload(true);
+    window.close()
+  }
+});
+</script>
