@@ -1,8 +1,8 @@
 
 <div class="container">
 	<h1>This Weeks New Programming Books</h1><br />
-	<div class="center">
-		
+	<div class="center"><br />
+<%=session['fb_error']%>		
 	<% if session['fb_token'] %>	<!-- show the books, they are logged in-->
 	  <%= render 'books/books' %>
 		<%= session['fb_auth'] %>
