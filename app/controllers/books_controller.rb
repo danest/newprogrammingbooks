@@ -8,8 +8,8 @@ class BooksController < ApplicationController
   end
   
   def create
-    session[:fb_auth] = request.env['omniauth.auth']
-    session[:fb_token] = session['fb_auth']['credentials']['token']
+    session[:fb_auth] = request.env[:omniauth.auth]
+    session[:fb_token] = session[:fb_auth][:credentials][:token]
     session[:fb_error] = nil
     redirect_to root_path
   end
