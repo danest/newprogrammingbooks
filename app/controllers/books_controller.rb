@@ -7,6 +7,7 @@ class BooksController < ApplicationController
     @books = Book.find(:all, :order => "id DESC")
     if session[:fb_auth]
       redirect_to terms_path
+    end
   end
   
   def create
