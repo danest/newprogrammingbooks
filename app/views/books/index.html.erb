@@ -8,6 +8,7 @@
 	
 	  <a href='logout'>Logout</a>
 	<% else %>
+		<%= session['fb_auth'] %>
 		<%= link_to image_tag("facebook.png"), "/auth/facebook",:class => "popup", :"data-width" => 600, :"data-height" => 400 %> <br />
 		<br />
 		<br />
