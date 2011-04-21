@@ -3,7 +3,7 @@
 	<h1>This Weeks New Programming Books</h1><br />
 	<div class="center">
 		
-	<% if session['fb_auth'] %>	<!-- show the books, they are logged in-->
+	<% if session['fb_token'] %>	<!-- show the books, they are logged in-->
 	  <%= render 'books/books' %>
 	
 	  <a href='logout'>Logout</a>
