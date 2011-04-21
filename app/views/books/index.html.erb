@@ -5,6 +5,7 @@
 		
 	<% if session['fb_auth'] %>
 	  <a href='logout'>Logout</a>
+	<!-- show the books, they are logged in-->
 	  <%= render 'books/books' %>
 	<% else %>
 		<%= link_to image_tag("facebook.png"), "/auth/facebook",:class => "popup", :"data-width" => 600, :"data-height" => 400 %> <br />
