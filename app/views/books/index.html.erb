@@ -5,7 +5,7 @@
 <%=session[:fb_error]%>		
 	<% if session[:fb_token] %>	<!-- show the books, they are logged in-->
 	  <%= render 'books/books' %>
-		<%= session[:fb_auth:] %>
+		<%= session[:fb_auth] %>
 	  <a href='logout'>Logout</a>
 	<% else %>
 		<%= session[:fb_auth] %>
