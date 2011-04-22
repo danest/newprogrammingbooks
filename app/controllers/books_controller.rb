@@ -37,7 +37,7 @@ class BooksController < ApplicationController
     session['fb_auth'] = nil
     session['fb_token'] = nil
     session['fb_error'] = nil
-    cookies[:remember_token] = nil
+    cookies.delete(:remember_token)
   end
   
 end
