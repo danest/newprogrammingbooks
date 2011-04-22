@@ -11,6 +11,7 @@ class BooksController < ApplicationController
     session['fb_token'] = session['fb_auth']['credentials']['token']
     session['fb_error'] = nil
     cookies.permanent.signed[:remember_token] = "79ee2f56999b916cf5043a12e9cbcb98"
+    redirect_to root_path
   end
   
   def destroy
