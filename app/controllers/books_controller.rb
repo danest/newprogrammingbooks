@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   
   def create
     cookies.permanent.signed['fb_auth'] = request.env['omniauth.auth']
-    cookies.permanent.signed['fb_token'] = session['fb_auth']['credentials']['token']
+    cookies.permanent.signed['fb_token'] = cookies['fb_auth']['credentials']['token']
     cookies.permanent.signed['fb_error'] = nil
     redirect_to root_path
   end
