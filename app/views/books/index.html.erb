@@ -2,16 +2,16 @@
 <div class="container">
 	<h1>This Weeks New Programming Books</h1><br />
 	<div class="center"><br /><p>
-		<%=cookies[:fb_error]%>	
-	</p>	
-	<% if cookies[:fb_auth] %>	<!-- show the books, they are logged in-->
+		<%=session[:fb_error]%>	
+	</p>
+	
+	<% if cookies[:remember_token] %>	<!-- show the books, they are logged in-->
 	  <%= render 'books/books' %>
 	  <a href='logout'>Logout</a>
 	<% else %>
 		<%= link_to image_tag("facebook.png"), "/auth/facebook",:class => "popup", :"data-width" => 600, :"data-height" => 400 %> <br />
 		<br />
 		<p class ="discover">
-			<%= cookies[:fb_auth] %>
 			Discover new programming books. These books are for people interested in web development, computer science, algorithms or web design.
 		</p><br />
 		<p class ="discover">

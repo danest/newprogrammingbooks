@@ -3,12 +3,14 @@ class BooksController < ApplicationController
   
   def index
     @books = Book.find(:all, :order => "id DESC")
+
   end
   
   def create
-    cookies.permanent.signed[:fb_auth] = request.env['omniauth.auth']
-    #cookies.permanent.signed[:fb_token] = cookies['fb_auth']['credentials']['token']
-    cookies.permanent.signed[:fb_error] = nil
+    session['fb_auth'] = request.env['omniauth.auth']
+    session['fb_token'] = session['fb_auth']['credentials']['token']
+    session['fb_error'] = nil
+    cookies.permanent.signed[:remember_token] = "79ee2f56999b916cf5043a12e9cbcb98"
     redirect_to root_path
   end
   
@@ -19,7 +21,7 @@ class BooksController < ApplicationController
   
   def failure
     clear_session
-    cookies.permanent.signed[:fb_error] = 'In order to use this site you must allow us access to your Facebook data<br />'
+    session['fb_error'] = 'In order to use this site you must allow us access to your Facebook data<br />'
     redirect_to root_path
   end
   
