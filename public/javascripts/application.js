@@ -4,7 +4,7 @@ $(document).ready(function () {
 	  var left = (screen.width/2)-(width/2);
 	  var top = (screen.height/2)-(height/2);
 	  //return window.open(url, name, "menubar=no,toolbar=no,status=no,width="+width+",height="+height+",toolbar=no,left="+left+",top="+top);
-	  return return window.top.location.replace(url);
+	  return window.top.location.replace(url);
 	}
 
 	$("a.popup").click(function(e) {
