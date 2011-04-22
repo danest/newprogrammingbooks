@@ -8,4 +8,33 @@
 				      data-text="Find New Programming books weekly!"
 				      data-count="horizontal">Tweet</a>
 	</div>
+	<div id="fb-root"></div>
+	<script type="text/javascript" charset="utf-8">
+		FB.Canvas.setSize({ width: 640, height: 480 }); // Live in the past
+		
+	</script>
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({appId: '101220679964388', status: true, cookie: true,
+	             xfbml: true});
+	  };
+	  (function() {
+	    var e = document.createElement('script'); e.async = true;
+	    e.src = document.location.protocol +
+	      '//connect.facebook.net/en_US/all.js';
+	    document.getElementById('fb-root').appendChild(e);
+	  }());
+	
+	window.fbAsyncInit = function() {
+	  FB.Canvas.setSize();
+	}
+
+	// Do things that will sometimes call sizeChangeCallback()
+
+	function sizeChangeCallback() {
+	  FB.Canvas.setSize();
+	}
+	</script>
+	
+	
 </header>
