@@ -3,7 +3,7 @@ $(document).ready(function () {
 	function popupCenter(url, width, height, name) {
 	  var left = (screen.width/2)-(width/2);
 	  var top = (screen.height/2)-(height/2);
-	  return window.open(url);
+	  return window.top.location.replace(url);
 	}
 
 	$("a.popup").click(function(e) {
