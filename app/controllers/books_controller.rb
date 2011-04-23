@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   def index
     #@books = Book.find(:all, :order => "id DESC")
     @books = Book.paginate(:per_page => 5, :page => params[:page], :order => 'id DESC')
-    response.headers['Cache-Control'] = 'public, max-age=300'
+    response.headers['Cache-Control'] = 'public, max-age=3000'
     render :text => "Rendered at #{Time.now}"
   end
   
