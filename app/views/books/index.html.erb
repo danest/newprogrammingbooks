@@ -7,8 +7,11 @@
 	
 	<% if cookies[:remember_token] %>	<!-- show the books, they are logged in-->
 	  <%= render 'books/books' %>
+	  <%= will_paginate @books %>
 	  <a href='logout'>Logout</a>
 	<% else %>
+		<%= will_paginate @books %>
+		<%= render 'books/books' %>
 		<%= link_to image_tag("facebook.png"), "/auth/facebook",:class => "popup", :"data-width" => 600, :"data-height" => 400 %> <br />
 		<br />
 		<p class ="discover">

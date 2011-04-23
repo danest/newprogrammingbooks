@@ -1,4 +1,4 @@
-Anynewbooks::Application.routes.draw do
+Anynewbooks::Application.routes.draw do |map|
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -9,7 +9,9 @@ Anynewbooks::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+  map.books_with_pages '/books/pages/:page', :controller => 'books', :action => 'index' 
+  
+  
   match '/auth/:provider/callback' => 'books#create'
   match '/auth/failure', :to => 'books#failure'
   match '/logout', :to => 'books#destroy'

@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
 
-  
+  caches_page :index
   def index
-    @books = Book.find(:all, :order => "id DESC")
-
+    #@books = Book.find(:all, :order => "id DESC")
+    @books = Book.paginate(:per_page => 5, :page => params[:page], :order => 'id DESC')
   end
   
   def create

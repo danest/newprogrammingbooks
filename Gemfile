@@ -10,6 +10,7 @@ gem 'omniauth'
 gem 'sqlite3'
 gem 'heroku'
 gem 'jquery-rails', '>= 0.2.6'
+gem "will_paginate", ">= 3.0.pre2"
 
 # Use unicorn as the web server
 # gem 'unicorn'
