@@ -16,6 +16,7 @@ class BooksController < ApplicationController
   
   def destroy
     clear_session
+    cookies.delete(:remember_token)
     redirect_to root_path
   end
   
