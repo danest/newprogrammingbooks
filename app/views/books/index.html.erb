@@ -6,7 +6,7 @@
 	</p>
 	
 	<% if cookies[:remember_token] %>	<!-- show the books, they are logged in-->
-	  <%= will_paginate @books %>
+	  <%= will_paginate @books %><br />
 	  <%= render 'books/books' %>
 	  <%= will_paginate @books %>
 	  <a href='logout'>Logout</a>
