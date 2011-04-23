@@ -7,9 +7,9 @@ require 'sucker'
 desc "Fetch Books from amazon- Programming"
 task :book_add => :environment do 
   #expire the index page
-  #ActionController::Base::expire_page('/')
+  ActionController::Base::expire_page('/')
   #expire the whole pages directory
-  #FileUtils.rm_rf "#{RAILS_ROOT}/public/books"
+  FileUtils.rm_rf "#{RAILS_ROOT}/public/books"
   url = "http://www.amazon.com/gp/new-releases/books/3839/ref=zg_bsnr_nav"
   doc = Nokogiri::HTML(open(url))
   r = /(.*?)[a-zA-Z0-9]\/dp\/(.*?)([a-zA-Z0-9]{10})(?:[\/?]|$)/
