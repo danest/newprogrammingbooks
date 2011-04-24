@@ -2,10 +2,10 @@
 <% @books.each do |book| %>
 	
 	<div class ="images">
-		<%= link_to image_tag(book[:thumbnail], :size => "130x160"), book[:url] %>
+		<%= link_to image_tag(book[:thumbnail], :size => "130x160"), book[:url], :target => "_blank" %>
 	</div>
 	<div class="information">
-		<%= link_to book[:title], book[:url] %> 
+		<%= link_to book[:title], book[:url], :target => "_blank" %> 
 		<p>
 			<span class="bold">Price:</span> <%= book[:price] %> <br />
 			<span class="bold">Publisher:</span> <%= book[:publisher] %><br />
@@ -14,7 +14,7 @@
 			<span class="bold">ISBN:</span> <%= book[:isbn] %><br />
 		</p>
 		<div class="awesome">
-			<%= link_to "Purchase", book[:url], :class=> "awesome" %>
+			<%= link_to "Purchase", book[:url], :class=> "awesome", :target => "_blank" %>
 		</div>
 		<div class="social">
 			   <a href="http://twitter.com/share" class="twitter-share-button"
