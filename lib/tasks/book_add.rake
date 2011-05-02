@@ -35,7 +35,7 @@ task :book_add => :environment do
     url = item['DetailPageURL']
     thumbnail = (item['MediumImage'] == nil ? "No Image" : item['MediumImage']['URL'] ) #75 X 57
     #author =  (item['ItemAttributes']['Author'].respond_to?('each') ? item['ItemAttributes']['Author'].join(", ") : item['ItemAttributes']['Author'])
-    author =  (item['ItemAttributes']['Author'].respond_to?('each') ? item['ItemAttributes']['Author'] : item['ItemAttributes']['Author'])
+    author =  (item['ItemAttributes']['Author'].respond_to?('each') ? item['ItemAttributes']['Author'][0] : item['ItemAttributes']['Author'][0])
     publisher =  item['ItemAttributes']['Manufacturer']
     date = item['ItemAttributes']['PublicationDate']
     isbn = item['ItemAttributes']['ISBN']
